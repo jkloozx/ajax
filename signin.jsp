@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>用户登录</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Wowphotos Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Combo - Clean and Flat Design" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.useso.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css' />
+    <!--<link href="bootstrap/bootstrap2.min.css" rel="stylesheet" />-->
+    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easydropdown.js"></script>
+    <script>$(document).ready(function(c) {
+        $('.alert-close').on('click', function(c){
+            $('.message').fadeOut('slow', function(c){
+                $('.message').remove();
+            });
+        });
+    });
+    </script>
+    <script>$(document).ready(function(c) {
+        $('.alert-close1').on('click', function(c){
+            $('.message1').fadeOut('slow', function(c){
+                $('.message1').remove();
+            });
+        });
+    });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/supersized.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- header -->
+
+
+<!-- header -->
+
+<div class="page-container">
+    <h1>登录</h1>
+    <form action="" method="post">
+        <input type="text" name="username" class="username" placeholder="用户名">
+        <input type="password" name="password" class="password" placeholder="密码">
+        <button type="submit">登陆</button>
+        <div class="error"><span>+</span></div>
+    </form>
+</div>
+
+<!-- Javascript -->
+<script src="assets/js/jquery-1.8.2.min.js"></script>
+<script src="assets/js/supersized.3.2.7.min.js"></script>
+<script src="assets/js/supersized-init.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>
+

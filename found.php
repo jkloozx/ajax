@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home</title>
+<title>寻物启事</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});	  
 });
 </script>
-
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
 		$(function (){
@@ -56,10 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 </head>
 <body>
-<?php
-require "header.php";
-?>
-<!-- header -->
+<?php require "header.php";?>
 <header class="header">
 	<div class="section clearfix">
 		<!--<span class="logo"><img src="images/logo.png" height="48" width="46" alt="Combo" /></span>-->
@@ -84,11 +80,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -99,7 +95,7 @@ require "header.php";
 			$result = mysqli_query($con,$sql);
 			/** @var TYPE_NAME $result */
 			while($row = mysqli_fetch_assoc($result)){
-				?>
+			?>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="view effect">
 						<a href="found-detail.php?id=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
@@ -114,7 +110,7 @@ require "header.php";
 						</form>
 					</div>
 				</div>
-				<?php
+			<?php
 			}
 			?>
 			<div class="clearfix"> </div>
@@ -130,11 +126,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -208,11 +204,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -286,11 +282,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -364,11 +360,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -442,11 +438,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
