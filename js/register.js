@@ -23,16 +23,20 @@ function loadXMLDoc(url,fun) {
 	}
 }
 function state_Change() {
+	var follow = document.getElementById('email');
+	var d = dialog({
+		quickClose: 'true',
+		align: 'right',
+	});
 	if(xmlhttp.readyState == 1){
-		document.getElementById("check_email").style = "font:20px bold italic;color:silver";
-		document.getElementById("check_email").innerHTML= "Please Hold On.....";
+		d.content("Please hold on...").show(follow);
 	}
 	if (xmlhttp.readyState==4) {// 4 = "loaded"
 		if (xmlhttp.status==200) {// 200 = "OK"
 			// alert("responseText="+xmlhttp.responseText);
-			document.getElementById("check_email").style = "font:20px bold;color:black";
-			document.getElementById("check_email").innerHTML=xmlhttp.responseText;
-		}
+			d.content(xmlhttp.responseText).show(follow);
+			// d.content('Email不能为空').show(follow);
+			}
 		else {
 			alert("Problem retrieving data:" + xmlhttp.statusText);
 		}
@@ -69,14 +73,19 @@ function isEmail() {
 	var email = document.getElementById("email");
 	var check_email = document.getElementById('check_email');
 	check_email.style = "font:18px bold italic;";
+	var follow = document.getElementById('email');
+	var d = dialog({
+		quickClose: 'true',
+		align: 'right',
+	});
 	if(email.value.length==0){
-		check_email.style["color"]='red';
-		check_email.innerHTML="Email不能为空";
+		// check_email.style["color"]='red';
+		// check_email.innerHTML="Email不能为空";
+		d.content('Email不能为空').show(follow);
 		return false;
 	}else{
 		if (rzt == null) {
-			check_email.style["color"] = 'red';
-			check_email.innerHTML = "Email地址不正确";
+			d.content('Email地址不正确').show(follow);
 			return false;
 		}else{
 			check_email_is_used();

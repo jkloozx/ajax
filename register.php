@@ -59,6 +59,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="lib/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    <script src="dist/dialog-min.js"></script>
+    <script src="js/register.js"></script>
 <style type="text/css">
 .width{
     width: 100%;
@@ -144,7 +148,6 @@ span{
 <!-----//end-copyright---->
 
 <!-- Javascript -->
-<script src="js/register.js"></script>
 <script src="assets/js/jquery-1.8.2.min.js"></script>
 <script src="assets/js/supersized.3.2.7.min.js"></script>
 <script src="assets/js/supersized-init.js"></script>
