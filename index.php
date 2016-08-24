@@ -95,23 +95,23 @@ require "header.php";
 		<div class="section group">
 			<?php
 			require "mysql-connect.php";
-			$sql = "select * from found order by id desc limit 4";
+			$sql = "select * from lost order by id desc limit 4";
 			$result = mysqli_query($con,$sql);
 			/** @var TYPE_NAME $result */
 			while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="view effect">
-						<a href="found-detail.php?id=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
+						<a href="lost-detail.php?id=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
 					</div>
 					<div class="cart">
-						<p class="title"> <a href="found-detail.php?id=<?php echo $row["id"] ?>"><?php echo mb_substr($row["title"],0,14,"utf-8");?></a></p>
+						<p class="title"> <a href="lost-detail.php?id=<?php echo $row["id"] ?>"><?php echo mb_substr($row["title"],0,14,"utf-8");?></a></p>
 						<div class="price">
 							<span class="actual"><?php echo $row["create_time"]; ?></span>
 						</div>
-						<form action="found-detail.php?id=<?php echo $row["id"] ?>">
+						<a href="lost-detail.php?id=<?php echo $row["id"] ?>">
 							<input type="submit" value="点击查看详情" class="button">
-						</form>
+						</a>
 					</div>
 				</div>
 				<?php

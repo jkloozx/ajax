@@ -9,13 +9,29 @@
     <!--<link href="css/bootstrap-responsive.min.css" rel="stylesheet">-->
     <!--<link href="css/site.css" rel="stylesheet">-->
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- CSS -->
+    <!--    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>-->
+    <!--    <link rel="stylesheet" href="assets/css/reset.css">-->
+    <link rel="stylesheet" href="assets/css/supersized.css">
+    <!--    <link rel="stylesheet" href="assets/css/style.css">-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.8.2.min.js"></script>
+    <script src="assets/js/supersized.3.2.7.min.js"></script>
+    <script src="assets/js/supersized-init-op.js"></script>
+    <!--    <script src="assets/js/scripts.js"></script>-->
 </head>
 <body background="images/zoro.jpg" >
 <div class="span9">
     <h1 style="color: wheat">
         请输入您要发表失物招领
     </h1>
-    <form id="edit-profile" class="form-horizontal">
+    <form enctype="multipart/form-data" action="lost-publish-server.php" method="post" id="edit-profile" class="form-horizontal">
         <fieldset style="color: wheat">
             <legend>你的发表</legend>
             <div class="control-group">
@@ -25,9 +41,9 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="input01">姓名</label>
+                <label class="control-label" for="input01">您的称呼</label>
                 <div class="controls">
-                    <input name="name" type="text" class="input-xlarge" id="input01" value="" />
+                    <input name="chenghu" type="text" class="input-xlarge" id="input01" value="" />
                 </div>
             </div>
             <div class="control-group">
@@ -60,6 +76,12 @@
                     <input name="address" type="text" class="input-xlarge" id="input01" value="" />
                 </div>
             </div>
+                <div class="control-group">
+                    <label class="control-label" for="input01">拾物地点</label>
+                    <div class="controls">
+                        <input name="place" type="text" class="input-xlarge" id="input01" value="" />
+                    </div>
+                </div>
             <div class="control-group">
                 <label class="control-label" for="textarea">留言备注</label>
                 <div class="controls">

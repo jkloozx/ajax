@@ -22,8 +22,16 @@
                                     <?php
                                     require "mysql-connect.php";
                                     $username = $_COOKIE["username"];
-                                    $sql = "select * from found where username = '$username' order by id DESC limit 3";
-                                    $sql2 = "select * from found where username = '$username'";
+                                    if ((substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "index.php")||(substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "lost-detail.php")){
+                                        $sql = "select * from lost where username = '$username' order by id DESC limit 3";
+                                        $sql2 = "select * from lost where username = '$username'";
+                                        $thisPage = "lost-detail.php";
+                                    }else{
+                                        $sql = "select * from found where username = '$username' order by id DESC limit 3";
+                                        $sql2 = "select * from found where username = '$username'";
+                                        $thisPage = "found-detail.php";
+                                    }
+
                                     $result = mysqli_query($con,$sql);
                                     $result2 = mysqli_query($con,$sql2);
                                     if ($result2 != null){
@@ -40,7 +48,7 @@
                                                 <div class="list_img"><img src="<?php echo $row["imageUrl"]?>" class="img-responsive" alt=""></div>
                                                 <div class="list_desc">
                                                     <h4>
-                                                        <a href="found-detail.php?id=<?php echo $row["id"]?>"><?php echo mb_substr($row["title"],0,14,"utf-8")?></a>
+                                                        <a href="<?php echo $thisPage."?id=".$row["id"]?>"><?php echo mb_substr($row["title"],0,14,"utf-8")?></a>
                                                     </h4></div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -75,8 +83,8 @@
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul class="cl-effect-15">
-                    <li class="<?php  if (substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "index.php") echo "active"; ?>"><a href="index.php">失物招领</a></li>
-                    <li class="<?php  if (substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "found.php") echo "active"; ?>"><a href="found.php">寻物启事</a></li>
+                    <li class="<?php  if ($thisPage == "lost-detail.php") echo "active"; ?>"><a href="index.php">失物招领</a></li>
+                    <li class="<?php  if ($thisPage == "found-detail.php") echo "active"; ?>"><a href="found.php">寻物启事</a></li>
                     <li><a href="register.php">注册新用户</a></li>
                     <div class="clearfix"> </div>
                 </ul>
@@ -99,7 +107,7 @@
 <div class="header-bottom">
     <div class="container">
         <div class="logo">
-            <a href="index.php"><img src="images/lost&found.jpg" width="119px" height="22px" class="img-responsive" alt=""></a>
+            <a href="index.php"><img src="<?php if ($thisPage == "lost-detail.php"){echo "images/lost.jpg";}else{echo "images/found2.jpg";} ?>" width="119px" height="22px" class="img-responsive" alt=""></a>
         </div>
         <div class="search2">
             <form>
