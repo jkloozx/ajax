@@ -37,7 +37,7 @@ function random($length){  //生成随机文件名函数
   }
 
   if (isset($_FILES['image']['name'])) {
-   $uploaddir="upload/images/";
+   $uploaddir="upload/found-images/";
    $type=array("jpg","gif","bmp","jpeg","pan","ico","png");//设置允许上传文件的类型
    if(!in_array(strtolower(fileext($_FILES['image']['name'])),$type))//判断上传文件的类型是否在范围内
    {

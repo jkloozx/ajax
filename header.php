@@ -31,6 +31,14 @@
                                         $sql2 = "select * from found where username = '$username'";
                                         $thisPage = "found-detail.php";
                                     }
+                                    if (isset($_GET["id"])){
+                                        $lf = $_GET["id"];
+                                        if ($lf == 1){
+                                            $thisPage = "lost-detail.php";
+                                        }else{
+                                            $thisPage = "found-detail.php";
+                                        }
+                                    }
 
                                     $result = mysqli_query($con,$sql);
                                     $result2 = mysqli_query($con,$sql2);
@@ -110,18 +118,19 @@
             <a href="index.php"><img src="<?php if ($thisPage == "lost-detail.php"){echo "images/lost.jpg";}else{echo "images/found2.jpg";} ?>" width="119px" height="22px" class="img-responsive" alt=""></a>
         </div>
         <div class="search2">
-            <form>
-                <li style="width:50%;" class="se-rc"><input type="text" value="" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}"></li>
+            <form method="get" action="search-result.php">
+                <li style="width:50%;" class="se-rc"><input name="search" type="text"></li>
                 <li style="width:30%;" class="roo-om"><div class="section_room1">
-                        <form>
+<!--                        <form>-->
                             <select id="country" onChange="change_country(this.value)" class="frm-field required">
                                 <option value="null">简体中文</option>
                                 <option value="null">English</option>
                                 <option value="AX">Arab</option>
                             </select>
-                        </form>
+<!--                        </form>-->
 
                     </div></li>
+                <input name="id" type="hidden" value="<?php if ($thisPage == "lost-detail.php"){echo 1;}else{echo 2;} ?>">
                 <li style="width:20%;" class="su-m"> <input type="submit" value="搜 索"></li>
                 <div class="clearfix"> </div>
             </form>

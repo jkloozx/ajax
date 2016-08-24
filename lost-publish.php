@@ -25,6 +25,12 @@
     <script src="assets/js/supersized.3.2.7.min.js"></script>
     <script src="assets/js/supersized-init-op.js"></script>
     <!--    <script src="assets/js/scripts.js"></script>-->
+    <script src="js/lost-publish.js"></script>
+    <script src="lib/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    <script src="dist/dialog-min.js"></script>
+    <script src="js/register.js"></script>
+
 </head>
 <body background="images/zoro.jpg" >
 <div class="span9">
@@ -37,13 +43,13 @@
             <div class="control-group">
                 <label class="control-label" for="input01">标题</label>
                 <div class="controls">
-                    <input name="title" type="text" class="input-xlarge" id="input01" value="" />
+                    <input onblur="check_title()" name="title" type="text" class="input-xlarge" id="title" value="" />
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label" for="input01">您的称呼</label>
                 <div class="controls">
-                    <input name="chenghu" type="text" class="input-xlarge" id="input01" value="" />
+                    <input onblur="check_call()" name="chenghu" type="text" class="input-xlarge" id="chenghu" value="" />
                 </div>
             </div>
             <div class="control-group">
@@ -55,13 +61,13 @@
             <div class="control-group">
                 <label class="control-label" for="input01">电子邮箱</label>
                 <div class="controls">
-                    <input name="email" type="text" class="input-xlarge" id="input01" value="" />
+                    <input onblur="check_email()" name="email" type="text" class="input-xlarge" id="email" value="" />
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label" for="input01">电话</label>
                 <div class="controls">
-                    <input name="tel" type="text" class="input-xlarge" id="input01" value="" />
+                    <input onblur="check_tel()" name="tel" type="text" class="input-xlarge" id="tel" value="" />
                 </div>
             </div>
             <div class="control-group">

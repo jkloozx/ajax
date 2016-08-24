@@ -938,6 +938,9 @@ i.in:hover{
   width: 50%;
   padding: 3%;
 }
+    .mf{
+        margin-left: 0;
+    }
 }
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 @media only screen and (max-width: 480px) {
