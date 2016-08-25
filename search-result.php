@@ -20,12 +20,12 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-<?php require "header.php"?>
+<?php require "header.php"; ?>
 <div class="products-1">
     <div class="container">
         <div class="content_top">
             <div class="heading">
-                <h3>饭卡</h3>
+                <h3><?php echo $title; ?></h3>
             </div>
             <div class="page-no">
                 <p>快速翻页：</p><ul>
@@ -39,18 +39,7 @@
         </div>
         <div class="section group">
             <?php
-            require "mysql-connect.php";
-            if (isset($_GET["search"])){
-                $search = $_GET["search"];
-            }else{
-                $search = 0;
-            }
-            if ($_GET["id"] == 1){
-                $table = "lost";
-            }else{
-                $table = "found";
-            }
-            $sql = "select * from $table where title like '%$search%' or content like '%$search%'";
+            $sql = "select * from $table where title like '%$search%' or content like '%$search%' or wupin like '%$search%'";
             $result = mysqli_query($con,$sql);
             /** @var TYPE_NAME $result */
             $i = 0;

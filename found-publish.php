@@ -57,7 +57,17 @@
             <div class="control-group">
                 <label class="control-label" for="input01">物品名称</label>
                 <div class="controls">
-                    <input name="wupin" type="text" class="input-xlarge" id="input01" value="" />
+                    <div class="form-group">
+                        <select name="wupin" style="color: black;background:rgba(108, 163, 255, 0.5);" class="form-control">
+                            <option value="饭卡">饭卡</option>
+                            <option value="钱包">钱包</option>
+                            <option value="手机">手机</option>
+                            <option value="u盘">u盘</option>
+                            <option value="课本">课本</option>
+                            <option value="电脑">电脑</option>
+                            <option value="女朋友">女朋友</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="control-group">

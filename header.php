@@ -23,23 +23,31 @@
                                     require "mysql-connect.php";
                                     $username = $_COOKIE["username"];
                                     if ((substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "index.php")||(substr(strrchr($_SERVER['PHP_SELF'],'/'),1) == "lost-detail.php")){
-                                        $sql = "select * from lost where username = '$username' order by id DESC limit 3";
-                                        $sql2 = "select * from lost where username = '$username'";
+                                          $table = "lost";
                                         $thisPage = "lost-detail.php";
                                     }else{
-                                        $sql = "select * from found where username = '$username' order by id DESC limit 3";
-                                        $sql2 = "select * from found where username = '$username'";
+                                          $table = "found";
                                         $thisPage = "found-detail.php";
                                     }
+                                    if (isset($_GET["search"])){
+                                        $search = $_GET["search"];
+                                    }else{
+                                        $search = 0;
+                                    }
                                     if (isset($_GET["id"])){
-                                        $lf = $_GET["id"];
-                                        if ($lf == 1){
-                                            $thisPage = "lost-detail.php";
-                                        }else{
-                                            $thisPage = "found-detail.php";
+                                        switch ($_GET["id"]){
+                                            case 1:$table = "lost";$title = "搜索结果";$thisPage = "lost-detail.php";
+                                                break;
+                                            case 2:$table = "found";$title = "搜索结果";$thisPage = "found-detail.php";
+                                                break;
+                                            case 3:$table = "lost";$title = $search;$thisPage = "lost-detail.php";
+                                                break;
+                                            case 4:$table = "found";$title = $search;$thisPage = "found-detail.php";
                                         }
                                     }
 
+                                    $sql = "select * from $table where username = '$username' order by id DESC limit 3";
+                                    $sql2 = "select * from $table where username = '$username'";
                                     $result = mysqli_query($con,$sql);
                                     $result2 = mysqli_query($con,$sql2);
                                     if ($result2 != null){

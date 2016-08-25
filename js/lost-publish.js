@@ -40,7 +40,8 @@ function check_title() {
     var format = /^[\S]{3,16}$/;
     var dt = dialog({
         quickClose: true,
-        align: 'right'
+        align: 'right',
+        skin: "bg"
     });
     dt.content("√").show(title);
     // if(username.match(format_head)){

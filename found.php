@@ -83,36 +83,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=饭卡"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<?php
-			require "mysql-connect.php";
-			$sql = "select * from found order by id desc limit 4";
-			$result = mysqli_query($con,$sql);
-			/** @var TYPE_NAME $result */
-			while($row = mysqli_fetch_assoc($result)){
-			?>
-				<div class="col_1_of_4 span_1_of_4">
-					<div class="view effect">
-						<a href="found-detail.php?id=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
-					</div>
-					<div class="cart">
-						<p class="title"> <a href="found-detail.php?id=<?php echo $row["id"] ?>"><?php echo mb_substr($row["title"],0,14,"utf-8");?></a></p>
-						<div class="price">
-							<span class="actual"><?php echo $row["create_time"]; ?></span>
-						</div>
-						<form action="found-detail.php?id=<?php echo $row["id"] ?>">
-							<input type="submit" value="点击查看详情" class="button">
-						</form>
-					</div>
-				</div>
-			<?php
-			}
-			?>
+			<?php $type = "饭卡";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -129,68 +106,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=钱包"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php">	<img src="images/4.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">楠苑食堂捡到一钱包</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/5.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button2">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/6.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button3">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/7.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button4">
-					</form>
-				</div>
-			</div>
+			<?php $type = "钱包";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -207,68 +129,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=手机"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php">	<img src="images/4.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">楠苑食堂捡到一钱包</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/5.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button2">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/6.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button3">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/7.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button4">
-					</form>
-				</div>
-			</div>
+			<?php $type = "手机";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -285,68 +152,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=课本"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php">	<img src="images/4.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">楠苑食堂捡到一钱包</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/5.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button2">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/6.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button3">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/7.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button4">
-					</form>
-				</div>
-			</div>
+			<?php $type = "课本";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -363,68 +175,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=u盘"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php">	<img src="images/4.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">楠苑食堂捡到一钱包</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/5.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button2">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/6.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button3">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/7.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button4">
-					</form>
-				</div>
-			</div>
+			<?php $type = "u盘";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -441,68 +198,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a href="#">1</a></li>
 				<li class="active"><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
+				<li>[<a href="search-result.php?id=4&search=女朋友"> 更多&gt;&gt;&gt;</a>]</li>
 			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php">	<img src="images/4.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">楠苑食堂捡到一钱包</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/5.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button2">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/6.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button3">
-					</form>
-				</div>
-			</div>
-			<div class="col_1_of_4 span_1_of_4">
-				<div class="view effect">
-					<a href="found-detail.php"><img src="images/7.jpg" class="img-responsive" alt=""></a>
-				</div>
-				<div class="cart">
-					<p class="title"> <a href="found-detail.php">Lorem ipsum dolor</a></p>
-					<div class="price">
-						<span class="actual">$22.00</span>
-					</div>
-					<form action="found-detail.php">
-						<input type="submit" value="Add to Cart" class="button4">
-					</form>
-				</div>
-			</div>
+			<?php $type = "女朋友";require "show-type.php"; ?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
