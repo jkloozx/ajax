@@ -50,8 +50,8 @@ require "header.php";
                     <div class="grid images_3_of_2">
                         <?php
                         require "mysql-connect.php";
-                        if (isset($_GET["id"])){
-                            $id = $_GET["id"];
+                        if (isset($_GET["detail"])){
+                            $id = $_GET["detail"];
                         }else{
                             $id = 0;
                         }
@@ -179,7 +179,7 @@ require "header.php";
                                 <span class="time"><?php echo mb_substr($row["create_time"],0,11,"utf-8") ?></span>
                                 <h5 class="head"><?php echo mb_substr($row["title"],0,16,"utf-8") ?></h5>
 <!--                                <p class="text">Lorem ipsum dolorh</p>-->
-                                <a href="found-detail.php?id=<?php echo $row["id"] ?>"><span class="italic">点击查看更多</span></a>
+                                <a href="found-detail.php?detail=<?php echo $row["id"] ?>"><span class="italic">点击查看更多</span></a>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -292,6 +292,9 @@ require "header.php";
         <div class="clearfix"> </div>
     </div>
 </div>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <!-- footer-bottom -->
 </body>
 </html>

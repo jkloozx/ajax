@@ -27,14 +27,6 @@
             <div class="heading">
                 <h3><?php echo $title; ?></h3>
             </div>
-            <div class="page-no">
-                <p>快速翻页：</p><ul>
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li>[<a href="#"> 更多&gt;&gt;&gt;</a>]</li>
-                </ul><p></p>
-            </div>
             <div class="clearfix"> </div>
         </div>
         <div class="section group">
@@ -48,14 +40,14 @@
                 ?>
                 <div <?php if ($i%4 == 1) echo "style='margin-left:0;'";?> class="col_1_of_4 span_1_of_4 ml">
                     <div class="view effect">
-                        <a href="<?php echo $thisPage;?>?id=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
+                        <a href="<?php echo $thisPage;?>?detail=<?php echo $row["id"] ?>">	<img src="<?php echo $row["imageUrl"]; ?>" class="img-responsive myImage" alt=""></a>
                     </div>
                     <div class="cart">
-                        <p class="title"> <a href="<?php echo $thisPage;?>?id=<?php echo $row["id"] ?>"><?php echo mb_substr($row["title"],0,14,"utf-8");?></a></p>
+                        <p class="title"> <a href="<?php echo $thisPage;?>?detail=<?php echo $row["id"] ?>"><?php echo mb_substr($row["title"],0,14,"utf-8");?></a></p>
                         <div class="price">
                             <span class="actual"><?php echo $row["create_time"]; ?></span>
                         </div>
-                        <a href="<?php echo $thisPage;?>?id=<?php echo $row["id"] ?>">
+                        <a href="<?php echo $thisPage;?>?detail=<?php echo $row["id"] ?>">
                             <input type="submit" value="点击查看详情" class="button">
                         </a>
                     </div>
@@ -67,5 +59,8 @@
         </div>
     </div>
 </div>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

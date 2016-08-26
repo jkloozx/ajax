@@ -18,59 +18,59 @@
     <![endif]-->
 </head>
 <body>
-<h1>你好，世界！</h1>
-<!-- Single button -->
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Action <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><option value="1">Action</option></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-    </ul>
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>今儿的风甚是喧嚣啊</th>
+        <th>今儿的风甚是喧嚣啊</th>
+        <th>今儿的风甚是喧嚣啊</th>
+        <th>今儿的风甚是喧嚣啊</th>
+    </tr>
+    <tr>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+    </tr>
+<tr>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+    </tr>
+<tr>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+        <td>今儿的风甚是喧嚣啊</td>
+    </tr>
+</table>
+<span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+      </span>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    删除
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">删除信息</h4>
+            </div>
+            <div class="modal-body">
+                删除后不可恢复，确认删除？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">删除</button>
+            </div>
+        </div>
+    </div>
 </div>
-<form role="form">
-    <div class="form-group">
-        <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <select multiple class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
-
-
-    <div class="form-group">
-        <select multiple class="form-control">
-            <option>踢足球</option>
-            <option>游泳</option>
-            <option>踢足球</option>
-            <option>游泳</option>
-            <option>踢足球</option>
-            <option>游泳</option>
-            <option>踢足球</option>
-            <option>游泳</option>
-            <option>踢足球</option>
-            <option>游泳</option>
-            <option>踢足球</option>
-            <option>游泳</option>
-        </select>
-    </div>
-
-</form>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
