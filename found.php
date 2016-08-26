@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home</title>
+<title>寻物启事</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});	  
 });
 </script>
-
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
 		$(function (){
@@ -56,10 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 </head>
 <body>
-<?php
-require "header.php";
-?>
-<!-- header -->
+<?php require "header.php";?>
 <header class="header">
 	<div class="section clearfix">
 		<!--<span class="logo"><img src="images/logo.png" height="48" width="46" alt="Combo" /></span>-->
@@ -84,11 +80,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=饭卡"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=饭卡"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -107,11 +103,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=钱包"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=钱包"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -130,11 +126,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=手机"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=手机"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -153,11 +149,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=课本"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=课本"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -176,11 +172,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=u盘"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=u盘"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -199,11 +195,11 @@ require "header.php";
 			</div>
 			<div class="page-no">
 				<p>快速翻页：</p><ul>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li>[<a href="search-result.php?id=3&search=女朋友"> 更多&gt;&gt;&gt;</a>]</li>
-				</ul><p></p>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li>[<a href="search-result.php?id=4&search=女朋友"> 更多&gt;&gt;&gt;</a>]</li>
+			</ul><p></p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -287,7 +283,6 @@ require "header.php";
 	</div>
 </div>
 <!-- footer-bottom -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
