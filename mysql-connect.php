@@ -9,5 +9,6 @@ $con = mysqli_connect("localhost","root","root","mydb");
 if ($con) {
 }else{
 	echo "数据库连接失败！";
+    exit;
 }
 mysqli_query($con,"set names utf8");

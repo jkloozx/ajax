@@ -8,6 +8,51 @@
             <div class="hea-rig">
                 <ul class="icon1 sub-icon1">
                     <?php
+                    require "mysql-connect.php";
+                    $username = $_COOKIE["username"];
+                    if ((substr(strrchr($_SERVER['PHP_SELF'], '/'), 1) == "index.php") || (substr(strrchr($_SERVER['PHP_SELF'], '/'), 1) == "lost-detail.php")) {
+                        $table = "lost";
+                        $thisPage = "lost-detail.php";
+                    } else {
+                        $table = "found";
+                        $thisPage = "found-detail.php";
+                    }
+                    if (isset($_GET["search"])) {
+                        $search = $_GET["search"];
+                    } else {
+                        $search = 0;
+                    }
+                    if (isset($_GET["id"])) {
+                        switch ($_GET["id"]) {
+                            case 1:
+                                $table = "lost";
+                                $title = "搜索结果";
+                                $thisPage = "lost-detail.php";
+                                break;
+                            case 2:
+                                $table = "found";
+                                $title = "搜索结果";
+                                $thisPage = "found-detail.php";
+                                break;
+                            case 3:
+                                $table = "lost";
+                                $title = $search;
+                                $thisPage = "lost-detail.php";
+                                break;
+                            case 4:
+                                $table = "found";
+                                $title = $search;
+                                $thisPage = "found-detail.php";
+                                break;
+                            case 5:
+                                $table = "lost";
+                                $thisPage = "lost-detail.php";
+                                break;
+                            case 6:
+                                $table = "found";
+                                $thisPage = "found-detail.php";
+                        }
+                    }
                     if (isset($_COOKIE["isLogin"])) {
                         echo "<li>欢迎回来！" . $_COOKIE["username"] . "</li>";
                         echo "<li><a href='logout.php'>注销</a></li>";
@@ -21,51 +66,6 @@
                                 <h3>最近发表的启事</h3>
                                 <div class="shopping_cart">
                                     <?php
-                                    require "mysql-connect.php";
-                                    $username = $_COOKIE["username"];
-                                    if ((substr(strrchr($_SERVER['PHP_SELF'], '/'), 1) == "index.php") || (substr(strrchr($_SERVER['PHP_SELF'], '/'), 1) == "lost-detail.php")) {
-                                        $table = "lost";
-                                        $thisPage = "lost-detail.php";
-                                    } else {
-                                        $table = "found";
-                                        $thisPage = "found-detail.php";
-                                    }
-                                    if (isset($_GET["search"])) {
-                                        $search = $_GET["search"];
-                                    } else {
-                                        $search = 0;
-                                    }
-                                    if (isset($_GET["id"])) {
-                                        switch ($_GET["id"]) {
-                                            case 1:
-                                                $table = "lost";
-                                                $title = "搜索结果";
-                                                $thisPage = "lost-detail.php";
-                                                break;
-                                            case 2:
-                                                $table = "found";
-                                                $title = "搜索结果";
-                                                $thisPage = "found-detail.php";
-                                                break;
-                                            case 3:
-                                                $table = "lost";
-                                                $title = $search;
-                                                $thisPage = "lost-detail.php";
-                                                break;
-                                            case 4:
-                                                $table = "found";
-                                                $title = $search;
-                                                $thisPage = "found-detail.php";
-                                                break;
-                                            case 5:
-                                                $table = "lost";
-                                                $thisPage = "lost-detail.php";
-                                                break;
-                                            case 6:
-                                                $table = "found";
-                                                $thisPage = "found-detail.php";
-                                        }
-                                    }
 
                                     $sql = "select * from $table where username = '$username' order by id DESC limit 3";
                                     $sql2 = "select * from $table where username = '$username'";
@@ -86,7 +86,7 @@
                                                                            class="img-responsive" alt=""></div>
                                                 <div class="list_desc">
                                                     <h4>
-                                                        <a href="<?php echo $thisPage . "?id=" . $row["id"] ?>"><?php echo mb_substr($row["title"], 0, 14, "utf-8") ?></a>
+                                                        <a href="<?php echo $thisPage . "?detail=" . $row["id"] ?>"><?php echo mb_substr($row["title"], 0, 14, "utf-8") ?></a>
                                                     </h4></div>
                                                 <div class="clearfix"></div>
                                             </div>

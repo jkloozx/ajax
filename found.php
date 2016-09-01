@@ -204,7 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 		</div>
 		<div class="section group">
-			<?php $type = "女朋友";require "show-type.php"; ?>
+			<?php $type = "女朋友";require "show-type.php"; mysqli_close($con);?>
 			<div class="clearfix"> </div>
 		</div>
 	</div>

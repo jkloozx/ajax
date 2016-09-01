@@ -77,7 +77,7 @@ function check_email() {
         quickClose: true,
         align: 'right'
     });
-    de.content("√").show(email);
+    // de.content("√").show(email);
     // if(username.match(format_head)){
     var rzt=email.value.match(format);
     if (rzt != null){

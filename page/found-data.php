@@ -49,21 +49,21 @@ while ($rst3 = mysql_fetch_assoc($qry3)) {
     $id2 = $rst3['id'];
     echo "<tr>";
     echo "<td>" . ++$num . "</td>";
-    echo "<td>" . $rst3['title'] . "</td>";
+    echo "<td>" . mb_substr($rst3['title'],0,10,"utf-8") . "</td>";
     echo "<td>" . $rst3['wupin'] . "</td>";
     echo "<td>" . $rst3['thanks'] . "</td>";
-    echo "<td>" . mb_substr($rst3['address'],0,12,"utf-8") . "</td>";
+    echo "<td>" . mb_substr($rst3['address'],0,7,"utf-8") . "</td>";
     echo "<td>" . $rst3['email'] . "</td>";
     echo "<td>" . $rst3['tel'] . "</td>";
-    echo "<td>" . mb_substr($rst3['content'],0,12,"utf-8") . "</td>";
-    echo "<td>" . mb_substr($rst3['create_time'],0,11,"utf-8") . "</td>";
+    echo "<td>" . mb_substr($rst3['content'],0,10,"utf-8") . "</td>";
+    echo "<td>" . mb_substr($rst3['create_time'],0,10,"utf-8") . "</td>";
 //mb_substr(,0,12,"utf-8");
     echo "";
     echo <<<eof
     <td>
     <a href="found-detail.php?detail=$id2">
     <button type='button' class='btn btn-success btn-sm' '>
-    查看更多
+    更多
     </button>
     </a>
     </td>

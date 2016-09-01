@@ -14,27 +14,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的寻物启事信息</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link href='http://fonts.useso.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link href='http://fonts.useso.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css'/>
     <!--<link href="bootstrap/bootstrap2.min.css" rel="stylesheet" />-->
-    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easydropdown.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <script type="text/javascript">
         //制作函数(ajax去获得分页信息)
-        function showpage(url){
+        function showpage(url) {
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState==4){
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
                     document.getElementById('result').innerHTML = xhr.responseText;
                 }
             }
-            xhr.open('get',url);
+            xhr.open('get', url);
             xhr.send(null);
         }
-        window.onload = function(){
+        window.onload = function () {
             showpage("./page/found-data.php");
         }
     </script>

@@ -3,19 +3,19 @@
 <head>
     <title>寻物启事-详细信息</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Wowphotos Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Combo - Clean and Flat Design" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link href='http://fonts.useso.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css' />
+    <meta name="keywords" content="HTML5 Template"/>
+    <meta name="description" content="Combo - Clean and Flat Design"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link href='http://fonts.useso.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css'/>
     <!--<link href="bootstrap/bootstrap2.min.css" rel="stylesheet" />-->
-    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easydropdown.js"></script>
     <script>$(document).ready(function(c) {
@@ -292,9 +292,10 @@ require "header.php";
         <div class="clearfix"> </div>
     </div>
 </div>
+<!-- footer-bottom -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-<!-- footer-bottom -->
 </body>
 </html>
